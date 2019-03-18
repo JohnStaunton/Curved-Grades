@@ -1,0 +1,16 @@
+#Import packages
+import numpy as np
+
+#Ask the user what the average was
+a = float(input("Enter the class average: "))
+b = float(input("Out of: "))
+c = 100*(a/b)
+
+#Compute the curve
+x = np.log10(87/c)/(2 - np.log10(c))
+
+#What is the user's grade?
+g = float(input("Enter the grade you got: "))
+h = 100*(g/b)
+f = 100**x*h**(1-x)
+print("Your curved grade out of 100 is: ", f)
